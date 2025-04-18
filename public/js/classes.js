@@ -9,7 +9,7 @@ Des fonctions pour :
 -	Vérifier l'état (retourne un message selon les stats, ex. : "Je suis fatigué !").
 
 Crée trois sous-classes qui héritent de CyberPet :
--	Dog : Bonus au bonheur quand on joue, mais la faim diminue plus vite.
+-	Bober : Bonus au bonheur quand on joue, mais la faim diminue plus vite.
 -	Cat : Consomme moins d'énergie en dormant, mais le bonheur baisse si on ne joue pas souvent.
 -	Dragon : La faim diminue très lentement, mais l'énergie chute rapidement si on joue trop.
 -	Chaque sous-classe doit redéfinir une fonction (par exemple, play) pour refléter son comportement unique.
@@ -24,4 +24,19 @@ export class CyberPet {
   play = (pet) => {};
   sleep = (pet) => {};
   checkState = (pet) => {};
+}
+export class Bober extends CyberPet {
+  constructor(name = "", species = "", stats = [{}]) {
+    super(name, species, stats);
+  }
+}
+export class Cat extends CyberPet {
+  constructor(name = "", species = "", stats = [{}]) {
+    super(name, species, stats);
+  }
+}
+export class Dragon extends CyberPet {
+  constructor(name = "", species = "", stats = [{}]) {
+    super(name, species, stats);
+  }
 }
