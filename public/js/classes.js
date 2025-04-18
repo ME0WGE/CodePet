@@ -41,16 +41,24 @@ export class CyberPet {
     let hunger = Object.values(this.stats[0])[0];
     let energy = Object.values(this.stats[0])[1];
     let happiness = Object.values(this.stats[0])[2];
-    console.log(happiness);
+    // console.log(happiness);
 
     happiness += 25;
-    console.log(happiness);
+    // console.log(happiness);
     hunger -= 25;
-    console.log(hunger);
+    // console.log(hunger);
     energy -= 25;
-    console.log(energy);
+    // console.log(energy);
   };
-  sleep = (pet) => {};
+  sleep = (pet) => {
+    let hunger = Object.values(this.stats[0])[0];
+    let energy = Object.values(this.stats[0])[1];
+
+    energy += 100;
+    console.log(energy);
+    hunger -= 50;
+    console.log(hunger);
+  };
   checkState = (pet) => {};
 }
 export class Bober extends CyberPet {
