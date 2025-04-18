@@ -102,9 +102,19 @@ export class CyberPet {
   };
 }
 export class Bober extends CyberPet {
-  constructor(name = "", species = "", playBonus, playMalus, playEnergy) {
+  constructor(
+    name = "",
+    species = "",
+    playBonus = 0,
+    playMalus = 0,
+    playEnergy = 0
+  ) {
     super(name, species);
-    this.play(playBonus, playMalus, playEnergy);
+    // this.play(playBonus, playMalus, playEnergy);
+    this.playBonus = 50;
+    this.playMalus = 35;
+    this.playEnergy = 25;
+    this.play(this.playBonus, this.playMalus, this.playEnergy);
   }
 }
 export class Cat extends CyberPet {
@@ -118,6 +128,6 @@ export class Dragon extends CyberPet {
   }
 }
 // Instances
-export const bober = new Bober("Bober", "Bobr", 50, 35, 25);
+export const bober = new Bober("Bober", "Bobr");
 export const cat = new Cat("Kitty", "Cat");
 export const dragon = new Dragon("Draco", "Dragon");
