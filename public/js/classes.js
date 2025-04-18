@@ -26,9 +26,9 @@ export class CyberPet {
       },
     ];
   }
-  feed = (pet) => {
+  feed = () => {
     let hunger = Object.values(this.stats[0])[0];
-    let energy = Object.values(this.stats[0])[1];
+    let energy = Object.values(this.stats[0])[2];
     // console.log(hunger);
     // console.log(energy);
 
@@ -37,10 +37,10 @@ export class CyberPet {
     energy -= 25;
     // console.log(energy);
   };
-  play = (pet) => {
+  play = () => {
     let hunger = Object.values(this.stats[0])[0];
-    let energy = Object.values(this.stats[0])[1];
-    let happiness = Object.values(this.stats[0])[2];
+    let happiness = Object.values(this.stats[0])[1];
+    let energy = Object.values(this.stats[0])[2];
     // console.log(happiness);
 
     happiness += 25;
@@ -50,16 +50,59 @@ export class CyberPet {
     energy -= 25;
     // console.log(energy);
   };
-  sleep = (pet) => {
+  sleep = () => {
     let hunger = Object.values(this.stats[0])[0];
-    let energy = Object.values(this.stats[0])[1];
+    let energy = Object.values(this.stats[0])[2];
+    // console.log(energy);
+    // console.log(hunger);
 
     energy += 100;
-    console.log(energy);
+    // console.log(energy);
     hunger -= 50;
-    console.log(hunger);
+    // console.log(hunger);
   };
-  checkState = (pet) => {};
+  checkState = () => {
+    let hunger = Object.values(this.stats[0])[0];
+    let happiness = Object.values(this.stats[0])[1];
+    let energy = Object.values(this.stats[0])[2];
+    console.log(hunger);
+    console.log(happiness);
+    console.log(energy);
+    hunger = 100;
+    happiness = 100;
+    energy = 100;
+
+    // Hunger State
+    if (hunger <= 25) {
+      console.log(`GRRRRRR! I'm really hungaryyy, pwease feed me :< `);
+    } else if (hunger <= 50) {
+      console.log(
+        `*ekhm* *ekhm* my belly going brrrr, give me food *angry stare*`
+      );
+    } else if (hunger <= 100) {
+      console.log(
+        `woooah *BURP* ooooh why feed me so much, me really full, me not gonna have *PROUT* a summer body`
+      );
+    }
+    // Happiness State
+    if (happiness <= 25) {
+      console.log(
+        `*sobbs* why treat me like shit, me only smol ${this.species}, not a monster *starts crying*`
+      );
+    } else if (happiness <= 50) {
+      console.log(`do you want to play a game? *menacing stare*`);
+    } else if (happiness <= 100) {
+      console.log(`HAPPY HAPPY HAPPY *silly dance* `);
+    }
+    // Energy State
+    if (energy <= 25) {
+      console.log(`*falls from fatigue* OUUUCH, I really need to sleep...`);
+    } else if (energy <= 50) {
+      console.log(`*yawns* gimme a pillow!!!`);
+    } else if (energy <= 100) {
+      console.log(`*tweaking* PLAY! PLAY! PLAY! PLAY! PLAY! PLAY!`);
+    }
+  };
 }
 export class Bober extends CyberPet {
   constructor(name = "", species = "") {
