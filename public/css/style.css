@@ -1,3 +1,4 @@
+/* Navbar */
 .navbar-codepet {
   font-size: 5rem !important;
 }
@@ -10,4 +11,17 @@
   text-decoration: none !important;
   color: purple !important;
   font-size: 1.5rem !important;
+}
+/* Content */
+.section-content {
+}
+.div-username {
+}
+.div-menu {
+}
+.div-stats {
+}
+.div-pet {
+}
+.div-shop {
 }
