@@ -15,28 +15,40 @@ Crée trois sous-classes qui héritent de CyberPet :
 -	Chaque sous-classe doit redéfinir une fonction (par exemple, play) pour refléter son comportement unique.
 */
 export class CyberPet {
-  constructor(name = "", species = "", stats = [{}]) {
+  constructor(name = "", species = "") {
     this.name = name;
     this.species = species;
-    this.stats = stats;
+    this.stats = [
+      {
+        hunger: 100,
+        happiness: 100,
+        energy: 100,
+      },
+    ];
   }
-  feed = (pet) => {};
+  feed = (pet) => {
+    let hunger = Object.values([0][0]);
+  };
   play = (pet) => {};
   sleep = (pet) => {};
   checkState = (pet) => {};
 }
 export class Bober extends CyberPet {
-  constructor(name = "", species = "", stats = [{}]) {
+  constructor(name = "", species = "") {
     super(name, species, stats);
   }
 }
 export class Cat extends CyberPet {
-  constructor(name = "", species = "", stats = [{}]) {
+  constructor(name = "", species = "") {
     super(name, species, stats);
   }
 }
 export class Dragon extends CyberPet {
-  constructor(name = "", species = "", stats = [{}]) {
+  constructor(name = "", species = "") {
     super(name, species, stats);
   }
 }
+// Instances
+const bober = new Bober("Bober", "Bobr");
+const cat = new Cat("Kitty", "Cat");
+const dragon = new Dragon("Draco", "Dragon");
