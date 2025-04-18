@@ -27,7 +27,15 @@ export class CyberPet {
     ];
   }
   feed = (pet) => {
-    let hunger = Object.values([0][0]);
+    let hunger = Object.values(this.stats[0])[0];
+    let energy = Object.values(this.stats[0])[1];
+    // console.log(hunger);
+    // console.log(energy);
+
+    hunger += 25;
+    // console.log(hunger);
+    energy -= 25;
+    // console.log(energy);
   };
   play = (pet) => {};
   sleep = (pet) => {};
@@ -35,20 +43,20 @@ export class CyberPet {
 }
 export class Bober extends CyberPet {
   constructor(name = "", species = "") {
-    super(name, species, stats);
+    super(name, species);
   }
 }
 export class Cat extends CyberPet {
   constructor(name = "", species = "") {
-    super(name, species, stats);
+    super(name, species);
   }
 }
 export class Dragon extends CyberPet {
   constructor(name = "", species = "") {
-    super(name, species, stats);
+    super(name, species);
   }
 }
 // Instances
-const bober = new Bober("Bober", "Bobr");
-const cat = new Cat("Kitty", "Cat");
-const dragon = new Dragon("Draco", "Dragon");
+export const bober = new Bober("Bober", "Bobr");
+export const cat = new Cat("Kitty", "Cat");
+export const dragon = new Dragon("Draco", "Dragon");
