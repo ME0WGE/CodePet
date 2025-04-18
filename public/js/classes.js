@@ -26,7 +26,7 @@ export class CyberPet {
       },
     ];
   }
-  feed = () => {
+  feed = (happinessValue, hungerValue, energyValue) => {
     let hunger = Object.values(this.stats[0])[0];
     let energy = Object.values(this.stats[0])[2];
     // console.log(hunger);
@@ -37,20 +37,20 @@ export class CyberPet {
     energy -= 25;
     // console.log(energy);
   };
-  play = () => {
+  play = (happinessValue, hungerValue, energyValue) => {
     let hunger = Object.values(this.stats[0])[0];
     let happiness = Object.values(this.stats[0])[1];
     let energy = Object.values(this.stats[0])[2];
     // console.log(happiness);
 
-    happiness += 25;
-    // console.log(happiness);
-    hunger -= 25;
-    // console.log(hunger);
-    energy -= 25;
-    // console.log(energy);
+    happiness += happinessValue;
+    console.log(happiness);
+    hunger -= hungerValue;
+    console.log(hunger);
+    energy -= energyValue;
+    console.log(energy);
   };
-  sleep = () => {
+  sleep = (happinessValue, hungerValue, energyValue) => {
     let hunger = Object.values(this.stats[0])[0];
     let energy = Object.values(this.stats[0])[2];
     // console.log(energy);
@@ -61,16 +61,13 @@ export class CyberPet {
     hunger -= 50;
     // console.log(hunger);
   };
-  checkState = () => {
+  checkState = (happinessValue, hungerValue, energyValue) => {
     let hunger = Object.values(this.stats[0])[0];
     let happiness = Object.values(this.stats[0])[1];
     let energy = Object.values(this.stats[0])[2];
-    console.log(hunger);
-    console.log(happiness);
-    console.log(energy);
-    hunger = 100;
-    happiness = 100;
-    energy = 100;
+    // console.log(hunger);
+    // console.log(happiness);
+    // console.log(energy);
 
     // Hunger State
     if (hunger <= 25) {
@@ -105,8 +102,9 @@ export class CyberPet {
   };
 }
 export class Bober extends CyberPet {
-  constructor(name = "", species = "") {
+  constructor(name = "", species = "", playBonus, playMalus, playEnergy) {
     super(name, species);
+    this.play(playBonus, playMalus, playEnergy);
   }
 }
 export class Cat extends CyberPet {
@@ -120,6 +118,6 @@ export class Dragon extends CyberPet {
   }
 }
 // Instances
-export const bober = new Bober("Bober", "Bobr");
+export const bober = new Bober("Bober", "Bobr", 50, 35, 25);
 export const cat = new Cat("Kitty", "Cat");
 export const dragon = new Dragon("Draco", "Dragon");
