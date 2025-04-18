@@ -2,4 +2,7 @@
 import { CyberPet, Bober, Cat, Dragon, bober, cat, dragon } from "./classes.js";
 
 // Code
-bober.feed();
+// console.log(`feed:`);
+// bober.feed();
+console.log(`play:`);
+bober.play();

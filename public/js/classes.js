@@ -37,7 +37,19 @@ export class CyberPet {
     energy -= 25;
     // console.log(energy);
   };
-  play = (pet) => {};
+  play = (pet) => {
+    let hunger = Object.values(this.stats[0])[0];
+    let energy = Object.values(this.stats[0])[1];
+    let happiness = Object.values(this.stats[0])[2];
+    console.log(happiness);
+
+    happiness += 25;
+    console.log(happiness);
+    hunger -= 25;
+    console.log(hunger);
+    energy -= 25;
+    console.log(energy);
+  };
   sleep = (pet) => {};
   checkState = (pet) => {};
 }
