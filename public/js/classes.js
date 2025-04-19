@@ -44,11 +44,9 @@ export class CyberPet {
       },
     ];
   }
-  feed = (happinessValue, hungerValue, energyValue) => {
+  feed = () => {
     let hunger = Object.values(this.stats[0])[0];
     let energy = Object.values(this.stats[0])[2];
-    // console.log(hunger);
-    // console.log(energy);
 
     hunger += 25;
     console.log(`Hunger: ${hunger}`);
@@ -59,7 +57,6 @@ export class CyberPet {
     let hunger = Object.values(this.stats[0])[0];
     let happiness = Object.values(this.stats[0])[1];
     let energy = Object.values(this.stats[0])[2];
-    // console.log(happiness);
 
     happiness += 45;
     console.log(`Happiness: ${happiness}`);
@@ -71,8 +68,6 @@ export class CyberPet {
   sleep = () => {
     let hunger = Object.values(this.stats[0])[0];
     let energy = Object.values(this.stats[0])[2];
-    // console.log(energy);
-    // console.log(hunger);
 
     energy += 100;
     console.log(`Energy: ${energy}`);
@@ -83,9 +78,6 @@ export class CyberPet {
     let hunger = Object.values(this.stats[0])[0];
     let happiness = Object.values(this.stats[0])[1];
     let energy = Object.values(this.stats[0])[2];
-    // console.log(hunger);
-    // console.log(happiness);
-    // console.log(energy);
 
     // Hunger State
     if (hunger <= 25) {
@@ -130,7 +122,6 @@ export class Bober extends CyberPet {
     let hunger = Object.values(this.stats[0])[0];
     let happiness = Object.values(this.stats[0])[1];
     let energy = Object.values(this.stats[0])[2];
-    // console.log(happiness);
 
     happiness += 75;
     console.log(`Happiness: ${happiness}`);
@@ -147,8 +138,6 @@ export class Cat extends CyberPet {
   sleep = () => {
     let hunger = Object.values(this.stats[0])[0];
     let energy = Object.values(this.stats[0])[2];
-    // console.log(energy);
-    // console.log(hunger);
 
     energy += 100;
     console.log(`Energy: ${energy}`);
@@ -164,7 +153,6 @@ export class Dragon extends CyberPet {
     let hunger = Object.values(this.stats[0])[0];
     let happiness = Object.values(this.stats[0])[1];
     let energy = Object.values(this.stats[0])[2];
-    // console.log(happiness);
 
     happiness += 45;
     console.log(`Happiness: ${happiness}`);
