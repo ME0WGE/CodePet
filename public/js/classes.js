@@ -21,7 +21,7 @@ Crée trois sous-classes qui héritent de CyberPet :
 |                                                                        |
 |========================================================================|
 */
-var playCount = 0;
+export var playCount = 0;
 
 /*
 |========================================================================|
@@ -49,9 +49,7 @@ export class CyberPet {
     let energy = Object.values(this.stats[0])[2];
 
     hunger += 25;
-    console.log(`Hunger: ${hunger}`);
     energy -= 25;
-    console.log(`Energy: ${energy}`);
   };
   play = () => {
     let hunger = Object.values(this.stats[0])[0];
@@ -59,20 +57,15 @@ export class CyberPet {
     let energy = Object.values(this.stats[0])[2];
 
     happiness += 45;
-    console.log(`Happiness: ${happiness}`);
     hunger -= 25;
-    console.log(`Hunger: ${hunger}`);
     energy -= 35;
-    console.log(`Energy: ${energy}`);
   };
   sleep = () => {
     let hunger = Object.values(this.stats[0])[0];
     let energy = Object.values(this.stats[0])[2];
 
     energy += 100;
-    console.log(`Energy: ${energy}`);
     hunger -= 50;
-    console.log(`Hunger: ${hunger}`);
   };
   checkState = () => {
     let hunger = Object.values(this.stats[0])[0];
@@ -124,11 +117,8 @@ export class Bober extends CyberPet {
     let energy = Object.values(this.stats[0])[2];
 
     happiness += 75;
-    console.log(`Happiness: ${happiness}`);
     hunger -= 25;
-    console.log(`Hunger: ${hunger}`);
     energy -= 35;
-    console.log(`Energy: ${energy}`);
   };
 }
 export class Cat extends CyberPet {
@@ -140,9 +130,7 @@ export class Cat extends CyberPet {
     let energy = Object.values(this.stats[0])[2];
 
     energy += 100;
-    console.log(`Energy: ${energy}`);
     hunger -= 15;
-    console.log(`Hunger: ${hunger}`);
   };
 }
 export class Dragon extends CyberPet {
@@ -155,13 +143,10 @@ export class Dragon extends CyberPet {
     let energy = Object.values(this.stats[0])[2];
 
     happiness += 45;
-    console.log(`Happiness: ${happiness}`);
     hunger -= 25;
-    console.log(`Hunger: ${hunger}`);
     energy -= 35;
-    console.log(`Energy: ${energy}`);
+
     playCount += 1;
-    console.log(playCount);
 
     if (playCount > 3 && playCount % 2 == 1) {
       // TODO: Energie diminue de 75 points;
@@ -176,5 +161,5 @@ export class Dragon extends CyberPet {
 |========================================================================|
 */
 export const bober = new Bober("Bober", "Bobr");
-export const cat = new Cat("Kitty", "Cat"); // TODO: add bonheur baisse s'il joue pas souvent
+export const cat = new Cat("Kitty", "Cat");
 export const dragon = new Dragon("Draco", "Dragon");

@@ -40,4 +40,4 @@ import {
 // dragon.play();
 // dragon.play();
 
-// gameLoop(bober);
+// gameLoop(cat);
