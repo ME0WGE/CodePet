@@ -33,9 +33,9 @@ export class CyberPet {
     // console.log(energy);
 
     hunger += 25;
-    // console.log(hunger);
+    console.log(`Hunger: ${hunger}`);
     energy -= 25;
-    // console.log(energy);
+    console.log(`Energy: ${energy}`);
   };
   play = () => {
     let hunger = Object.values(this.stats[0])[0];
@@ -44,24 +44,24 @@ export class CyberPet {
     // console.log(happiness);
 
     happiness += 45;
-    console.log(happiness);
+    console.log(`Happiness: ${happiness}`);
     hunger -= 25;
-    console.log(hunger);
+    console.log(`Hunger: ${hunger}`);
     energy -= 35;
-    console.log(energy);
+    console.log(`Energy: ${energy}`);
   };
-  sleep = (happinessValue, hungerValue, energyValue) => {
+  sleep = () => {
     let hunger = Object.values(this.stats[0])[0];
     let energy = Object.values(this.stats[0])[2];
     // console.log(energy);
     // console.log(hunger);
 
     energy += 100;
-    // console.log(energy);
+    console.log(`Energy: ${energy}`);
     hunger -= 50;
-    // console.log(hunger);
+    console.log(`Hunger: ${hunger}`);
   };
-  checkState = (happinessValue, hungerValue, energyValue) => {
+  checkState = () => {
     let hunger = Object.values(this.stats[0])[0];
     let happiness = Object.values(this.stats[0])[1];
     let energy = Object.values(this.stats[0])[2];
@@ -84,7 +84,7 @@ export class CyberPet {
     // Happiness State
     if (happiness <= 25) {
       console.log(
-        `*sobbs* why treat me like shit, me only smol ${this.species}, not a monster *starts crying*`
+        `*sobbs* why treat me that badly, me only smol ${this.species}, not a monster *starts crying*`
       );
     } else if (happiness <= 50) {
       console.log(`do you want to play a game? *menacing stare*`);
@@ -115,24 +115,56 @@ export class Bober extends CyberPet {
     // console.log(happiness);
 
     happiness += 75;
-    console.log(happiness);
+    console.log(`Happiness: ${happiness}`);
     hunger -= 25;
-    console.log(hunger);
+    console.log(`Hunger: ${hunger}`);
     energy -= 35;
-    console.log(energy);
+    console.log(`Energy: ${energy}`);
   };
 }
 export class Cat extends CyberPet {
   constructor(name = "", species = "") {
     super(name, species);
   }
+  sleep = () => {
+    let hunger = Object.values(this.stats[0])[0];
+    let energy = Object.values(this.stats[0])[2];
+    // console.log(energy);
+    // console.log(hunger);
+
+    energy += 100;
+    console.log(`Energy: ${energy}`);
+    hunger -= 15;
+    console.log(`Hunger: ${hunger}`);
+  };
 }
 export class Dragon extends CyberPet {
   constructor(name = "", species = "") {
     super(name, species);
   }
+  play = () => {
+    let hunger = Object.values(this.stats[0])[0];
+    let happiness = Object.values(this.stats[0])[1];
+    let energy = Object.values(this.stats[0])[2];
+    // console.log(happiness);
+
+    happiness += 45;
+    console.log(`Happiness: ${happiness}`);
+    hunger -= 25;
+    console.log(`Hunger: ${hunger}`);
+    energy -= 35;
+    console.log(`Energy: ${energy}`);
+    playCount += 1;
+    console.log(playCount);
+
+    if (playCount > 3 && playCount % 2 == 1) {
+      // TODO: Energie diminue de 75 points;
+    }
+  };
 }
 // Instances
-export const bober = new Bober("Bober", "Bobr");
-export const cat = new Cat("Kitty", "Cat");
-export const dragon = new Dragon("Draco", "Dragon");
+export const bober = new Bober("Bober", "Bobr"); // TODO: add faim diminue plus vite
+export const cat = new Cat("Kitty", "Cat"); // TODO: add bonheur baisse s'il joue pas souvent
+export const dragon = new Dragon("Draco", "Dragon"); // TODO: add faim diminue très lentement
+// Variables
+var playCount = 0;
