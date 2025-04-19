@@ -51,7 +51,6 @@ export function happinessMonitoring(pet) {
   if (stats.happiness <= 0) {
     return false; // Pet is deadge because of lack of happiness => Program stops and prints game over message
   }
-
   return true; // Still Alive => Program still running
 }
 
@@ -70,24 +69,16 @@ export function statsUsage(pet) {
     stats.happiness -= 3;
     stats.energy -= 5;
   }
-  // If pet is cat, then stat usage is generic, no modification added.
-  if (pet == cat) {
-    stats.hunger -= 7;
-    stats.happiness -= 3;
-    stats.energy -= 5;
-  }
   // If pet is dragon, then hunger usage is lesser than other pets.
   if (pet == dragon) {
     stats.hunger -= 1;
     stats.happiness -= 3;
     stats.energy -= 5;
   }
-
   // Check if any stats drop to 0
   if (stats.hunger <= 0 || stats.happiness <= 0 || stats.energy <= 0) {
     return false; // Pet is Deadge => Program stops and prints game over message
   }
-
   return true; // Still Alive => Program still running
 }
 
