@@ -6,7 +6,7 @@
 |========================================================================|
 */
 
-import { bober, CyberPet } from "./classes.js";
+import { bober, cat, CyberPet, dragon } from "./classes.js";
 
 /**
  *Runs code at set interval. parameter: (interval = number in milliseconds)
@@ -29,14 +29,25 @@ export function statsUsage(pet) {
 
   console.log(`Hunger: ${pet.stats[0].hunger}`);
   console.log(`Happiness: ${pet.stats[0].happiness}`);
-  console.log(`Energy: ${pet.stats[0].energy}`);
+  console.log(`Energy: ${pet.stats[0].energy}
+==========================`);
 
   // Substract stats each 3000ms
   // If pet is bober, then hunger stat subsraction is greater than other pets
   if (pet == bober) {
     stats.hunger -= 14;
-  } else {
-    stats.huner -= 7;
+    stats.happiness -= 3;
+    stats.energy -= 5;
+  }
+
+  if (pet == cat) {
+    stats.hunger -= 7;
+    stats.happiness -= 3;
+    stats.energy -= 5;
+  }
+
+  if (pet == dragon) {
+    stats.hunger -= 1;
     stats.happiness -= 3;
     stats.energy -= 5;
   }
