@@ -4,13 +4,25 @@
 }
 .navbar-icon {
   text-decoration: none !important;
-  color: purple !important;
+  color: plum !important;
   font-size: 2rem !important;
 }
 .navbar-me0wge {
   text-decoration: none !important;
-  color: purple !important;
+  color: plum !important;
   font-size: 1.5rem !important;
+}
+/* Footer */
+footer {
+  margin: 10vh !important;
+}
+.navbar-icon-footer {
+  text-decoration: none !important;
+  color: plum !important;
+  font-size: 2rem !important;
+}
+span {
+  color: plum !important;
 }
 /* Content */
 .section-content {
