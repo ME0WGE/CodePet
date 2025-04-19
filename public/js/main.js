@@ -1,7 +1,21 @@
-// Imports
-import { CyberPet, Bober, Cat, Dragon, bober, cat, dragon } from "./classes.js";
+/*
+|========================================================================|
+|                                                                        |
+|                               Import                                   |
+|                                                                        |
+|========================================================================|
+*/
+import { CyberPet, Bober, Cat, Dragon } from "./classes.js";
+import { bober, cat, dragon } from "./classes.js";
+// import { bober, cat, dragon } from "./instances.js";
 
-// Code
+/*
+|========================================================================|
+|                                                                        |
+|                             Game Logic                                 |
+|                                                                        |
+|========================================================================|
+*/
 // console.log(`${bober.name}`);
 // console.log(`feed:`);
 // bober.feed();
@@ -13,10 +27,10 @@ import { CyberPet, Bober, Cat, Dragon, bober, cat, dragon } from "./classes.js";
 // bober.checkState();
 // console.log(`${cat.name}`);
 // cat.sleep();
-console.log(`${dragon.name}`);
-dragon.play();
-dragon.play();
-dragon.play();
-dragon.play();
-dragon.play();
-dragon.play();
+// console.log(`${dragon.name}`);
+// dragon.play();
+// dragon.play();
+// dragon.play();
+// dragon.play();
+// dragon.play();
+// dragon.play();

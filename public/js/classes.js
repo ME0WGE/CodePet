@@ -14,6 +14,24 @@ Crée trois sous-classes qui héritent de CyberPet :
 -	Dragon : La faim diminue très lentement, mais l'énergie chute rapidement si on joue trop.
 -	Chaque sous-classe doit redéfinir une fonction (par exemple, play) pour refléter son comportement unique.
 */
+/*
+|========================================================================|
+|                                                                        |
+|                               Variables                                |
+|                                                                        |
+|========================================================================|
+*/
+var playCount = 0;
+
+/*
+|========================================================================|
+|                                                                        |
+|                               Class                                    |
+|                                                                        |
+|========================================================================|
+*/
+// import { bober, cat, dragon } from "./instances.js";
+
 export class CyberPet {
   constructor(name = "", species = "") {
     this.name = name;
@@ -162,9 +180,13 @@ export class Dragon extends CyberPet {
     }
   };
 }
-// Instances
+/*
+|========================================================================|
+|                                                                        |
+|                               Instances                                |
+|                                                                        |
+|========================================================================|
+*/
 export const bober = new Bober("Bober", "Bobr"); // TODO: add faim diminue plus vite
 export const cat = new Cat("Kitty", "Cat"); // TODO: add bonheur baisse s'il joue pas souvent
 export const dragon = new Dragon("Draco", "Dragon"); // TODO: add faim diminue très lentement
-// Variables
-var playCount = 0;
