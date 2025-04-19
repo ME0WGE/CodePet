@@ -37,17 +37,17 @@ export class CyberPet {
     energy -= 25;
     // console.log(energy);
   };
-  play = (happinessValue, hungerValue, energyValue) => {
+  play = () => {
     let hunger = Object.values(this.stats[0])[0];
     let happiness = Object.values(this.stats[0])[1];
     let energy = Object.values(this.stats[0])[2];
     // console.log(happiness);
 
-    happiness += happinessValue;
+    happiness += 45;
     console.log(happiness);
-    hunger -= hungerValue;
+    hunger -= 25;
     console.log(hunger);
-    energy -= energyValue;
+    energy -= 35;
     console.log(energy);
   };
   sleep = (happinessValue, hungerValue, energyValue) => {
@@ -102,20 +102,25 @@ export class CyberPet {
   };
 }
 export class Bober extends CyberPet {
-  constructor(
-    name = "",
-    species = "",
-    playBonus = 0,
-    playMalus = 0,
-    playEnergy = 0
-  ) {
+  constructor(name = "", species = "") {
     super(name, species);
-    // this.play(playBonus, playMalus, playEnergy);
     this.playBonus = 50;
     this.playMalus = 35;
     this.playEnergy = 25;
-    this.play(this.playBonus, this.playMalus, this.playEnergy);
   }
+  play = () => {
+    let hunger = Object.values(this.stats[0])[0];
+    let happiness = Object.values(this.stats[0])[1];
+    let energy = Object.values(this.stats[0])[2];
+    // console.log(happiness);
+
+    happiness += 75;
+    console.log(happiness);
+    hunger -= 25;
+    console.log(hunger);
+    energy -= 35;
+    console.log(energy);
+  };
 }
 export class Cat extends CyberPet {
   constructor(name = "", species = "") {
