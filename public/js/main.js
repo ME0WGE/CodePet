@@ -7,6 +7,7 @@
 */
 import { CyberPet, Bober, Cat, Dragon } from "./classes.js";
 import { bober, cat, dragon } from "./classes.js";
+import { performActionEachInterval, gameLoop } from "./functions.js";
 // import { bober, cat, dragon } from "./instances.js";
 
 /*
@@ -34,3 +35,5 @@ import { bober, cat, dragon } from "./classes.js";
 // dragon.play();
 // dragon.play();
 // dragon.play();
+
+// gameLoop();
